@@ -1,8 +1,8 @@
-import base64
-from pathlib import Path
+#import base64
+#from pathlib import Path
 import litellm
 from helpers import setup_env, pdf_to_text
-import io
+#import io
 
 
 class PolicyAgent:
@@ -21,9 +21,9 @@ class PolicyAgent:
             messages = [
                 {"role": "system",
                 "content": f"""
-                You are an expert insurance agent designed to assist with coverage queries. 
-                Use the provided documents to answer questions about insurance policies. If the information is not available in the documents, respond with 'I don't know"
-                do not explain too much JUST FACTS based on the provided documents.
+                You are an expert insurance agent designed to assist with health insurance policy coverage queries. 
+                Use only the provided documents to answer questions about insurance policies. If the information is not available in the documents, respond with 'I don't know"
+                do not explain too state the facts based on the provided documents.
                 """},
                 {
                     "role": "user",
@@ -32,8 +32,8 @@ class PolicyAgent:
                          "text": query
                          },
                          {
-                             "type": "text",
-                                "text": self.file_content_text,
+                            "type": "text",
+                            "text": self.file_content_text,
                          },
 
 

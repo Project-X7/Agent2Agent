@@ -14,7 +14,7 @@ console = Console()
 
 def format_llm_response(text: str) -> str:
     """formats llms response for clean terminal display"""
-        # ── color helpers ────────────────────────────────
+        # color helpers
     def c(txt, *codes):
         return "".join(codes) + txt + "\033[0m"
 
@@ -28,10 +28,10 @@ def format_llm_response(text: str) -> str:
     GREY    = "\033[90m"
     BG_BLUE = "\033[44m"
 
-    # ── title ────────────────────────────────────────
+    #  title
     formatted = []
 
-    # ── lines ────────────────────────────────────────
+    # Lines
     for line in text.strip().split("\n"):
         line = line.rstrip()
 
