@@ -12,7 +12,7 @@ class PolicyAgent:
         #     self.file_content = base64.standard_b64encode(file.read()).decode("utf-8")
         # pdf_bytes = base64.b64decode(self.file_content)
         # reader = PyPDF2.PdfReader(io.BytesIO(pdf_bytes))
-        self.file_content_text = pdf_to_text("/Users/priyakhoesial/Dev/projects/agentic-ai/protocols/agent2agent/test data/2026AnthemgHIPSBC.pdf")
+        self.file_content_text = pdf_to_text("/Users/priyakhoesial/Dev/ai/agentic-ai/protocols/a2a/test data/2026AnthemgHIPSBC.pdf")
     def answer_query(self, query: str) -> str:
         response = litellm.completion(
             model="groq/openai/gpt-oss-120b",
